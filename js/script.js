@@ -1,3 +1,2 @@
-function contactAlert() {
-  alert("Thanks for your interest! Please contact us.");
-}
+// Ready for future animation or form logic
+console.log("Pro Business Website Loaded");
