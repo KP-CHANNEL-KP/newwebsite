@@ -1,57 +1,120 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  padding: 0;
 }
 
-header {
-  background: #222;
-  color: #fff;
-  padding: 15px;
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 60px;
+  background: #0f172a;
 }
 
-nav a {
+.logo {
   color: #fff;
-  margin-left: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: #cbd5f5;
+  margin-left: 25px;
   text-decoration: none;
 }
 
+.navbar .btn {
+  background: #2563eb;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+/* Hero */
 .hero {
-  background: #f4f4f4;
-  padding: 60px;
+  height: 90vh;
+  background: linear-gradient(120deg, #1e3a8a, #0f172a);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-button {
-  padding: 10px 20px;
-  border: none;
-  background: #007bff;
-  color: white;
-  cursor: pointer;
+.hero h1 {
+  font-size: 48px;
 }
 
-section {
-  padding: 40px;
+.hero p {
+  margin: 20px 0;
+  font-size: 18px;
 }
 
-.service-box {
+.btn-primary {
+  background: #38bdf8;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sections */
+.section {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.section.gray {
+  background: #f1f5f9;
+}
+
+.cards {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  margin-top: 40px;
 }
 
 .card {
   flex: 1;
-  padding: 20px;
-  background: #eee;
-  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
 }
 
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Footer */
 footer {
-  background: #222;
-  color: #fff;
+  background: #0f172a;
+  color: #cbd5f5;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
 }
